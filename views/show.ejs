@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<h1>THOU HAVE REACHED THE SHOW PAGE</h1>
+
+<h2><%= show.title %></h2>
+	<img src = "<%= show.poster %>">
+	<div><%= show.imdb %></div>
+	<ul>
+		<li>Favourite Character: <%= show.fav_char %></li>
+		<li>Favourite Season: <%= show.fav_season%></li>
+		<li>Favourite Couple: <%= show.fav_couple%></li>
+		<div><a href= "/shows"> GO BACK </a></div>
+		<div><a href = "/shows/<%= show._id%>/edit">EDIT PAGE</a></div>
+		<form action = "/shows/<%= show._id%>?_method=DELETE" method="POST">
+			<div><button>DELETE</button></div>
+		</form>
+<%- include("partials/footer") %>

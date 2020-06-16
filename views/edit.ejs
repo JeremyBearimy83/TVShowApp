@@ -1,0 +1,9 @@
+<%- include("partials/header") %>
+<form action = "/shows/<%= show._id%>?_method=PUT" method = "POST">
+	<input type = "text" name = "show[title]" value = "<%=show.title %>">
+	<input type = "text" name = "show[poster]" value = "<%= show.poster%>"  >
+	<input type = "text" name = "show[fav_char]" value = "<%=show.fav_char%>">
+	<input type = "text" name = "show[fav_season]"value = "<%=show.fav_season%>">
+	<input type = "text" name = "show[fav_couple]"value = "<%=show.fav_couple%>">
+	<input type = "submit">
+<%- include("partials/footer") %>

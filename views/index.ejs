@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+<div><a href="/shows/new">ADD NEW SHOW</a></div>
+<h1>THESE ARE YOUR FAVOURITE TV SHOWS</h1>
+<% shows.forEach(function(show){ %>
+<h2><%= show.title %></h2>
+<img class="imageSize" src="<%= show.poster %>" />
+<div><%= show.imdb %></div>
+<div><a href="/shows/<%= show._id%>">More info..</a></div>
+
+<%});%> <%- include("partials/footer") %>
